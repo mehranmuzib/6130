@@ -10,6 +10,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import {firebase} from '../config'
 
+
 const Login = () => {
     const navigation = useNavigation()
     const [email, setEmail] = useState('');
@@ -23,11 +24,11 @@ const Login = () => {
         }
     }
 
+   
+
     return (
         <View style={StyleSheet.container}>
-            <Text style={{fontWeight: 'bold',fontSize:26}}>
-                Login
-            </Text>
+            
 
             <View style={{marginTop:40}}>
 
@@ -53,10 +54,13 @@ const Login = () => {
             onPress={() => loginUser(email, password)}
             style={styles.button} 
             >
-            <Text style={{fontWeight:'bold', fontSize:22}}>
-                Login
+            <Text style={{fontWeight:'bold', fontSize:22, alignItems: 'center'}}>
+            Login
             </Text>
             </TouchableOpacity>
+
+
+
 
             <TouchableOpacity 
             onPress={() => navigation.navigate('Registration')}
@@ -66,6 +70,8 @@ const Login = () => {
                 Don't have an account?
             </Text>
             </TouchableOpacity>
+
+            
 
         </View>
     )
@@ -98,12 +104,12 @@ const styles = StyleSheet.create({
     },
     button: {
        marginTop: 50,
-       height:70,
-       width:250,
-       backgroundColor:'#026efd',
+       height:50,
+       width:120,
+       backgroundColor:'#00e4d0',
        allignItems:'center',
        justifyContent:'center',
-       borderRadius:50,
+       borderRadius:20,
 
     },
     buttonText: {
